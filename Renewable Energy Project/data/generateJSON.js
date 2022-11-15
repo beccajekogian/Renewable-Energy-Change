@@ -27,7 +27,7 @@ dataSet.forEach(function(data) {
 });
 
 
-fs.writeFileSync('countries.json', JSON.stringify(finalSet), 'utf8');
+fs.writeFileSync('data.json', JSON.stringify(finalSet), 'utf8');
 
 
 /*

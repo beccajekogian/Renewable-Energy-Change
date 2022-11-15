@@ -1,7 +1,7 @@
 const fs = require('fs');
 const ejs = require('ejs');
 
-let country_info = JSON.parse(fs.readFileSync('../data/countries.json', 'utf8'));
+let country_info = JSON.parse(fs.readFileSync('../data/data.json', 'utf8'));
 let index_template = fs.readFileSync('views/index.ejs', 'utf8');
 let country_template = fs.readFileSync('views/country.ejs', 'utf8');
 

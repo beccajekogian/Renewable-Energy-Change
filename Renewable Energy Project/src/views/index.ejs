@@ -13,7 +13,7 @@
 
 <body>
   <header>
-    <h1>Harry Potter Characters</h1>
+    <h1>All the Countries</h1>
   </header>
   <section id="country-table">
     <table>
@@ -25,9 +25,13 @@
       </tr>
       <% for(country in data){ %>
       <tr>
-        <td><a href="<%=data[character].link%>.html"><%= country %></a></td>
-        <td><%= data[country].year %></td>
-        <td><%= data[character].energy %></td>
+        <td><a href="<%=data[country].link%>.html"><%= country %></a></td>
+        <%  for(int i = 1966; i<= 2021;  i++){ %>
+          <td><%= data[country][i]%></td>
+          <td><%= data[country].energy %></td>
+        <%}%>
+        <td><%= data[country][].energy %></td>
+        <td><%= data[country].energy %></td>
         <!-- <td><%= data[character].species %></td> -->
         <!-- <td>
           <% if (data[country].skills.length > 0){ %>
