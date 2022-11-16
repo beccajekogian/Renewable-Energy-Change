@@ -26,8 +26,9 @@
       <% for(country in data){ %>
       <tr>
         <td><a href="<%=data[character].link%>.html"><%= country %></a></td>
-        <td><%= data[country].year %></td>
-        <td><%= data[character].energy %></td>
+        <%  var i; for i in years { %>
+        <td><%= data[country][i].energy %></td>
+        <td><%= data[country].energy %></td>
         <!-- <td><%= data[character].species %></td> -->
         <!-- <td>
           <% if (data[country].skills.length > 0){ %>
@@ -37,7 +38,11 @@
             <%}) %>
           </ol>
           <%}%>
+
+
         </td> -->
+        <%}%>
+
       </tr>
       <%}%>
     </table>
