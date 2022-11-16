@@ -23,24 +23,12 @@
         <th>Year</th>
         <th>Renewables (% growth)</th>
       </tr>
-      <% for(country in data){ %>
+      <% for(let country in data){ %>
       <tr>
         <td><a href="<%=data[character].link%>.html"><%= country %></a></td>
-        <%  var i; for i in years { %>
-        <td><%= data[country][i].energy %></td>
-        <td><%= data[country].energy %></td>
-        <!-- <td><%= data[character].species %></td> -->
-        <!-- <td>
-          <% if (data[country].skills.length > 0){ %>
-          <ol>
-            <% data[character].skills.forEach(function(val){%>
-            <li> <%=val%></li>
-            <%}) %>
-          </ol>
-          <%}%>
-
-
-        </td> -->
+        <%  for (let i = 1966; i < 2022; i++) { %>
+        <td>Year: <%=i%></td>
+        <td>Energy: <%= data[country][i] %></td>
         <%}%>
 
       </tr>
