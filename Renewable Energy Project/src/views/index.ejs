@@ -25,10 +25,9 @@
       </tr>
       <% for(let country in data){ %>
       <tr>
-        <td><a href="<%=data[character].link%>.html"><%= country %></a></td>
+        <td><a href="<%=data[country].link%>.html"><%= country %></a></td>
         <%  for (let i = 1966; i < 2022; i++) { %>
-        <td>Year: <%=i%></td>
-        <td>Energy: <%= data[country][i] %></td>
+        <td><%=i%>: <%= data[country][i] %></td>
         <%}%>
 
       </tr>

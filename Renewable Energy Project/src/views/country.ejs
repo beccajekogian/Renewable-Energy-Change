@@ -18,23 +18,16 @@
   <section id="energy-stats">
   <h2>Stats</h2>
   <ul>
-    <!-- <li>Country: <%=stats.gender%></li> -->
     <%  for (let i = 1966; i < 2022; i++) { %>
-    <td></td>
-    <td></td>
+      <li><%=i%>: <%= data[i] %></li>
+
+      <!-- <li>Year: <%=i%></li>
+      <li>Energy: <%= data[i] %></li> -->
+
 
     <%}%>
-    <li>Year: <%=i%></li>
-    <li>Energy: <%= data[i] %></li>
-    <!-- <li>Skill:
-      <% if (stats.skills && stats.skills.length > 0){ %>
-      <ol>
-        <% stats.skills.forEach(function(skill){%>
-        <li> <%=skill%></li>
-        <%}) %>
-      </ol>
-      <%}%>
-    </li> -->
+
+
   </ul>
   </section>
 
