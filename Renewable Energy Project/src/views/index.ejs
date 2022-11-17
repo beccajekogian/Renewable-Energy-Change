@@ -13,21 +13,23 @@
 
 <body>
   <header>
-    <h1>Harry Potter Characters</h1>
+    <h1>Energy Growth percentages each year</h1>
   </header>
   <section id="country-table">
     <table>
       <tr>
         <th>Country</th>
-        <th>Code</th>
-        <th>Year</th>
-        <th>Renewables (% growth)</th>
+        <%  for (let i = 1966; i < 2022; i++) { %>
+        <th>Renewables (% growth) in <%=i%></th>
+        <%}%>
+        <!-- <th>Year</th> -->
+        <!-- <th>Renewables (% growth)</th> -->
       </tr>
       <% for(let country in data){ %>
       <tr>
         <td><a href="<%=data[country].link%>.html"><%= country %></a></td>
         <%  for (let i = 1966; i < 2022; i++) { %>
-        <td><%=i%>: <%= data[country][i] %></td>
+        <td><%= data[country][i] %></td>
         <%}%>
 
       </tr>
