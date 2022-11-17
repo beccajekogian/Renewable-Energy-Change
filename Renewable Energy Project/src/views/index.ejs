@@ -23,25 +23,13 @@
         <th>Year</th>
         <th>Renewables (% growth)</th>
       </tr>
-      <% for(country in data){ %>
+      <% for(let country in data){ %>
       <tr>
         <td><a href="<%=data[country].link%>.html"><%= country %></a></td>
-        <%  for(int i = 1966; i<= 2021;  i++){ %>
-          <td><%= data[country][i]%></td>
-          <td><%= data[country].energy %></td>
+        <%  for (let i = 1966; i < 2022; i++) { %>
+        <td><%=i%>: <%= data[country][i] %></td>
         <%}%>
-        <td><%= data[country][].energy %></td>
-        <td><%= data[country].energy %></td>
-        <!-- <td><%= data[character].species %></td> -->
-        <!-- <td>
-          <% if (data[country].skills.length > 0){ %>
-          <ol>
-            <% data[character].skills.forEach(function(val){%>
-            <li> <%=val%></li>
-            <%}) %>
-          </ol>
-          <%}%>
-        </td> -->
+
       </tr>
       <%}%>
     </table>

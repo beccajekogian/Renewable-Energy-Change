@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title><%=name%></title>
+  <title><%=country%></title>
   <meta name="author" content="You">
   <meta name="description" content="A compendium of Harry Potter characters">
   <meta content="text/html" http-equiv="Content-type" />
@@ -18,18 +18,12 @@
   <section id="energy-stats">
   <h2>Stats</h2>
   <ul>
-    <!-- <li>Country: <%=stats.gender%></li> -->
-    <li><%=stats.year%>: <%=stats.energy%></li>
-    <!-- <li>Energy: <%=stats.energy%></li> -->
-    <!-- <li>Skill:
-      <% if (stats.skills && stats.skills.length > 0){ %>
-      <ol>
-        <% stats.skills.forEach(function(skill){%>
-        <li> <%=skill%></li>
-        <%}) %>
-      </ol>
-      <%}%>
-    </li> -->
+    <%  for (let i = 1966; i < 2022; i++) { %>
+      <li><%=i%>: <%= data[i] %></li>
+
+    <%}%>
+
+
   </ul>
   </section>
 
