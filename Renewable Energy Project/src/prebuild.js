@@ -88,7 +88,7 @@ let style = 'styles.css';
   }
 
 
-if (fs.existsSync('../public/Spain.html' && !fs.existsSync('../public/about.html')){
+if (fs.existsSync('../public/Spain.html') && !fs.existsSync('../public/about.html') && !fs.existsSync('../public/images') && !fs.existsSync('../public/headers.css')){
   fs.readdir('../public', (err, files) => {
     if (err) throw err;
 
