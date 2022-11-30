@@ -9,8 +9,7 @@
   <meta content="text/html" http-equiv="Content-type" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="../public/styles.css">
-  <script src="https://cdn.plot.ly/plotly-2.12.1.min.js"></script>
-
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 </head>
@@ -26,7 +25,6 @@
   <ul>
     <%  for (let i = 1966; i < 2022; i++) { %>
       <li><%=i%>: <%= data[i] %></li>
-
     <%}%>
 
 
@@ -34,25 +32,24 @@
 
   </ul>
   </section>
-  <div id="tester" style="width:90%;height:250px;"></div>
+
+  <!-- <div id="tester" style="width:90%;height:250px;"></div> -->
   <script>
 
-     let xData =  [];
-     let yData = [];
+     let xData =  <%=[]%>
+     let yData = <%=[]%>
 
-    for (let i = 1966; i < 2022; i++) {
-       xData[i-1966] = i;
-       yData[i-1966] = data[i];
-    }
+  <%  for (let i = 1966; i < 2022; i++) {%>
+      xData[<%=i-1966%>] = <%=i%>
+      yData[<%=i-1966%>] = <%=data[i]%>
+    <%}%>
     console.log(xData);
     console.log(yData);
 
 
-
-
-     let graph_data = [{
-       x: xData,
-       y: yData,
+     <%= let graph_data = [{ %>
+       <%=x%>: <%=xdata%>,
+       <%=y%>: <%=ydata%>,
       type: 'scatter',
       mode: 'lines'
     }];
