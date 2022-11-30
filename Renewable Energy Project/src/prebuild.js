@@ -95,10 +95,12 @@ if (fs.existsSync('../public/Spain.html') && !fs.existsSync('../public/about.htm
     console.log(__dirname);
 
     for (let file of files) {
+      if (file != '../public/about.html' && file != '../public/headers.css'){
       fs.unlink('../public/' + file, (err) => {
         if (err) throw err;
       });
     }
+  }
     console.log(`public stuff is deleted!`)
   });
 }
