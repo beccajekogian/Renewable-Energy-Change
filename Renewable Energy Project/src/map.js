@@ -1,3 +1,4 @@
+//
 // var data = [{
 //   type: "choroplethmapbox", locations: ["NY", "MA", "VT"], z: [-50, -10, -20],
 //   geojson: "https://raw.githubusercontent.com/python-visualization/folium/master/examples/data/us-states.json"

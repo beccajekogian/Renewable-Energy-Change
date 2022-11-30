@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>United Kingdom</title>
+  <meta name="author" content="You">
+  <meta name="description" content="A compendium of Harry Potter characters">
+  <meta content="text/html" http-equiv="Content-type" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarExample01"
+      aria-controls="navbarExample01"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarExample01">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <header>
+    <h1>United Kingdom</h1>
+  </header>
+  <section id="energy-stats">
+  <h2>Stats</h2>
+  <ul>
+    
+      <li>1966: -1.6478776931762695</li>
+    
+      <li>1967: 7.6940178871154785</li>
+    
+      <li>1968: -23.807579040527344</li>
+    
+      <li>1969: -12.520146369934082</li>
+    
+      <li>1970: 39.31202697753906</li>
+    
+      <li>1971: -25.639326095581055</li>
+    
+      <li>1972: 0</li>
+    
+      <li>1973: 13.785945892333984</li>
+    
+      <li>1974: 6.070876121520996</li>
+    
+      <li>1975: -5.723410606384277</li>
+    
+      <li>1976: 18.186546325683594</li>
+    
+      <li>1977: -12.830686569213867</li>
+    
+      <li>1978: 2.9590368270874023</li>
+    
+      <li>1979: 5.698847770690918</li>
+    
+      <li>1980: -8.110618591308594</li>
+    
+      <li>1981: 11.760246276855469</li>
+    
+      <li>1982: 2.6476502418518066</li>
+    
+      <li>1983: 0</li>
+    
+      <li>1984: 0.022268295288085938</li>
+    
+      <li>1985: -12.82341480255127</li>
+    
+      <li>1986: 20.58297348022461</li>
+    
+      <li>1987: -12.21371841430664</li>
+    
+      <li>1988: 16.6907901763916</li>
+    
+      <li>1989: -2.216923236846924</li>
+    
+      <li>1990: 19.77475929260254</li>
+    
+      <li>1991: -8.552950859069824</li>
+    
+      <li>1992: 20.723926544189453</li>
+    
+      <li>1993: -9.480762481689453</li>
+    
+      <li>1994: 22.06326675415039</li>
+    
+      <li>1995: -4.213637351989746</li>
+    
+      <li>1996: -14.913249015808105</li>
+    
+      <li>1997: 26.094127655029297</li>
+    
+      <li>1998: 20.57558250427246</li>
+    
+      <li>1999: 11.179363250732422</li>
+    
+      <li>2000: 3.107917308807373</li>
+    
+      <li>2001: -3.7006020545959473</li>
+    
+      <li>2002: 16.758323669433594</li>
+    
+      <li>2003: -2.3802757263183594</li>
+    
+      <li>2004: 31.61890411376953</li>
+    
+      <li>2005: 23.961984634399414</li>
+    
+      <li>2006: 13.658941268920898</li>
+    
+      <li>2007: 17.517148971557617</li>
+    
+      <li>2008: 31.32516098022461</li>
+    
+      <li>2009: 17.82748794555664</li>
+    
+      <li>2010: 7.62866735458374</li>
+    
+      <li>2011: 20.364749908447266</li>
+    
+      <li>2012: 8.568679809570312</li>
+    
+      <li>2013: 26.056312561035156</li>
+    
+      <li>2014: 19.975067138671875</li>
+    
+      <li>2015: 20.6575870513916</li>
+    
+      <li>2016: -0.22966861724853516</li>
+    
+      <li>2017: 16.769039154052734</li>
+    
+      <li>2018: 13.842905044555664</li>
+    
+      <li>2019: 10.967350006103516</li>
+    
+      <li>2020: 10.110116004943848</li>
+    
+      <li>2021: -9.673661231994629</li>
+    
+
+
+  </ul>
+  </section>
+
+  <div id="tester" style="width:90%;height:250px;"></div>
+
+  <script>
+
+     let xdata =  [];
+     let ydata = [];
+
+  
+      xdata[0] = 1966
+      ydata[0] = -1.6478776931762695
+    
+      xdata[1] = 1967
+      ydata[1] = 7.6940178871154785
+    
+      xdata[2] = 1968
+      ydata[2] = -23.807579040527344
+    
+      xdata[3] = 1969
+      ydata[3] = -12.520146369934082
+    
+      xdata[4] = 1970
+      ydata[4] = 39.31202697753906
+    
+      xdata[5] = 1971
+      ydata[5] = -25.639326095581055
+    
+      xdata[6] = 1972
+      ydata[6] = 0
+    
+      xdata[7] = 1973
+      ydata[7] = 13.785945892333984
+    
+      xdata[8] = 1974
+      ydata[8] = 6.070876121520996
+    
+      xdata[9] = 1975
+      ydata[9] = -5.723410606384277
+    
+      xdata[10] = 1976
+      ydata[10] = 18.186546325683594
+    
+      xdata[11] = 1977
+      ydata[11] = -12.830686569213867
+    
+      xdata[12] = 1978
+      ydata[12] = 2.9590368270874023
+    
+      xdata[13] = 1979
+      ydata[13] = 5.698847770690918
+    
+      xdata[14] = 1980
+      ydata[14] = -8.110618591308594
+    
+      xdata[15] = 1981
+      ydata[15] = 11.760246276855469
+    
+      xdata[16] = 1982
+      ydata[16] = 2.6476502418518066
+    
+      xdata[17] = 1983
+      ydata[17] = 0
+    
+      xdata[18] = 1984
+      ydata[18] = 0.022268295288085938
+    
+      xdata[19] = 1985
+      ydata[19] = -12.82341480255127
+    
+      xdata[20] = 1986
+      ydata[20] = 20.58297348022461
+    
+      xdata[21] = 1987
+      ydata[21] = -12.21371841430664
+    
+      xdata[22] = 1988
+      ydata[22] = 16.6907901763916
+    
+      xdata[23] = 1989
+      ydata[23] = -2.216923236846924
+    
+      xdata[24] = 1990
+      ydata[24] = 19.77475929260254
+    
+      xdata[25] = 1991
+      ydata[25] = -8.552950859069824
+    
+      xdata[26] = 1992
+      ydata[26] = 20.723926544189453
+    
+      xdata[27] = 1993
+      ydata[27] = -9.480762481689453
+    
+      xdata[28] = 1994
+      ydata[28] = 22.06326675415039
+    
+      xdata[29] = 1995
+      ydata[29] = -4.213637351989746
+    
+      xdata[30] = 1996
+      ydata[30] = -14.913249015808105
+    
+      xdata[31] = 1997
+      ydata[31] = 26.094127655029297
+    
+      xdata[32] = 1998
+      ydata[32] = 20.57558250427246
+    
+      xdata[33] = 1999
+      ydata[33] = 11.179363250732422
+    
+      xdata[34] = 2000
+      ydata[34] = 3.107917308807373
+    
+      xdata[35] = 2001
+      ydata[35] = -3.7006020545959473
+    
+      xdata[36] = 2002
+      ydata[36] = 16.758323669433594
+    
+      xdata[37] = 2003
+      ydata[37] = -2.3802757263183594
+    
+      xdata[38] = 2004
+      ydata[38] = 31.61890411376953
+    
+      xdata[39] = 2005
+      ydata[39] = 23.961984634399414
+    
+      xdata[40] = 2006
+      ydata[40] = 13.658941268920898
+    
+      xdata[41] = 2007
+      ydata[41] = 17.517148971557617
+    
+      xdata[42] = 2008
+      ydata[42] = 31.32516098022461
+    
+      xdata[43] = 2009
+      ydata[43] = 17.82748794555664
+    
+      xdata[44] = 2010
+      ydata[44] = 7.62866735458374
+    
+      xdata[45] = 2011
+      ydata[45] = 20.364749908447266
+    
+      xdata[46] = 2012
+      ydata[46] = 8.568679809570312
+    
+      xdata[47] = 2013
+      ydata[47] = 26.056312561035156
+    
+      xdata[48] = 2014
+      ydata[48] = 19.975067138671875
+    
+      xdata[49] = 2015
+      ydata[49] = 20.6575870513916
+    
+      xdata[50] = 2016
+      ydata[50] = -0.22966861724853516
+    
+      xdata[51] = 2017
+      ydata[51] = 16.769039154052734
+    
+      xdata[52] = 2018
+      ydata[52] = 13.842905044555664
+    
+      xdata[53] = 2019
+      ydata[53] = 10.967350006103516
+    
+      xdata[54] = 2020
+      ydata[54] = 10.110116004943848
+    
+      xdata[55] = 2021
+      ydata[55] = -9.673661231994629
+    
+
+    let graph_data = [{
+       x: xdata,
+       y: ydata,
+      type: 'scatter',
+      mode: 'lines'
+    }];
+
+    let layout = {
+       xaxis: {
+        tickmode: "linear",
+        tick0: 0.5,
+        dtick: 0.75
+      }
+    }
+
+    Plotly.newPlot('tester', graph_data, layout);
+
+
+  </script>
+
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+<!-- <script src="jquery/dist/jquery.slim.min.js"></script>
+<script src="popper.js/dist/umd/popper.min.js"></script>
+<script src="bootstrap/dist/js/bootstrap.min.js"></script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+  <footer>
+  This is my awesome, dynamically inserted footer! Data from <a href="https://www.kaggle.com/gulsahdemiryurek/harry-potter-dataset"> Kaggle - Harry Potter</a>
+</footer>
+
+  </body>
+</body>
+
+</html>
