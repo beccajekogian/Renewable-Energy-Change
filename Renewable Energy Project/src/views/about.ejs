@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>About</title>
+  <meta name="author" content="Becca + Aarav">
+  <meta name="description" content="An about page for info on our project">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+  <%- include ('global/navbar');  %>
+<header>
+  <!-- Navbar -->
+<!--
+=======
+>>>>>>> 203178cb949064e28321f4854ac412470ea28bb6
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarExample01"
+        aria-controls="navbarExample01"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+  <!-- Navbar -->
+
+  <!-- Jumbotron -->
+  <div class="p-5 text-center bg-light">
+    <h1 class="mb-3">About Our Project</h1>
+    <!-- <a class="btn btn-primary" href="" role="button">Call to action</a> -->
+  </div>
+  <!-- Jumbotron -->
+</header>
+
+
+  <header>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+  </header>
+
+  <dl>
+     <dt>Project Description</dt>
+     <dd> Our project provides viewers with an insight on the progress of various countries with respect to renewable energy over time. Our format allows the viewer to get both a clear visual of worldwide energy change each year and a change over time breakdown of each individual country. </dd>
+ </dl>
+
+  <dl>
+     <dt>Vocabulary definitions</dt>
+     <dd>  - input-equivalent primary energy: amount of fuel that would be required by thermal power stations to generate the reported electricity. It takes account of the inefficiencies in fossil fuel production and provides a better approximation of each source's share of "final energy" consumption.</dd>
+     <dd>  - Primary energy in exajoules (EJ) has been converted to TWh by Our World in Data based on a conversion factor of 1,000,000 / 3,600 (~277.778). </dd>
+     <dd>  - non-fossil based electricity sources: nuclear, hydro, wind, solar, geothermal, biomass in power, and other renewable sources.  </dd>
+     <dd>  - data calculated as gross generation and not accounting for cross-border electricity supply.</dd>
+ </dl>
+
+ <dl>
+     <dt>Evaluate Becca's Wireframe:</dt>
+     <img src="images/IMG_6651.jpg" width="500"/>
+     <img src="images/IMG_6653.jpg" width="500"/>
+     <dd> - Understandability: Becca's design for the micro-page can be confusing becuase it includes too many graphs.</dd>
+     <dd> - Consistancy: Becca's design uses the same color set on the micro-page as it does on the micro-page. This can help show how a country's renewable energy usage each year corrolates with other countries' usage in 2021 if you compare color.</dd>
+     <dd> - Achievability: Becca's micro-page design would require finding another dataset that includes usage of non-renewable forms of energy, so we are not going to include all of those graphs (at least not in the beginning)</dd>
+     <dd> - Iterability: would be very easy to add more graphs to include data about non-renewable energy usage in the future. This would not change how the user interacts with the interface-- there would just be a more information on the page.</dd>
+     <dd> - Mappings: using the same color key to show the change in percent growth per year when you click on the country as the colors on macro-page.</dd>
+     <dd> - Constraints: can only click on countries on the world map that have micro-pages (unable to click on countries that do not have micro-pages).</dd>
+     <dd> - Affordances and Signifiers: on Becca's macro-page, it tells the user to click on countries, signifying that clicking will take them to the micro-page to see more information. otherwise, the user might not know that they can click, so we will include this on just one to show that the user is able to click, but no overcrowd smaller countries with this text.</dd>
+   </dl>
+
+ <dl>
+   <dt>Evaluate Aarav's Wireframe:</dt>
+   <img src="images/IMG_6652.jpg" width="500"/>
+   <img src="images/IMG_6654.jpg" width="500"/>
+   <dd> - Understandability: Aarav's design for the micro-page is more simplistic because it does not involve so many graphs, which makes it easier to read. We are going to use this approach and include less graphs on our micro-page: just the change in renewable energy usage per year from 1960-2021.</dd>
+   <dd> - Understandability: Making the color change rather than just getting darker make the differences clearer. We will use this color system because it is easier to understand. </dd>
+   <dd> - Achievability: Aarav's micro-page design is more achievabile because it does not require finding another data set.</dd>
+   <dd> - Perceptibility: Because this coloring might not always be clear, especially for color-blind people, we are going to make it display the country's percent growth of renewable energy (the number the color is supposed  to represent) when the user hovers over the country. </dd>
+   <dd> - Constraints: he has parts of Africa marked off becuase there is no data for those countries. this crossing off helps show users that there is no data and it cannot be clicked on. Should provide feedback too if a user tries to click that we do not have data for the country.</dd>
+   <dd> - Comfort: Aarav's micro-page has a graph that is much larger making it more comfortable to see and understand.</dd>
+ </dl>
+
+ <dl>
+    <dt>Pipeline</dt>
+    <dd> 1) Download data and convert to JSON, develop and evaluate wireframes, create about page, setup bootstrap</dd>
+    <dd> 2) Display data on site without formatting, use ejs to create html macro and micro html pages</dd>
+    <dd> 3) Format data to appear clearly in graph format</dd>
+    <img src="images/pipelineChart.png" width="600"/>
+</dl>
+
+ <dl>
+   <dt>Division of Labor</dt>
+   <dd> - In order to efficiently collaborate in completing the project, we have divided our tasks by the following categories:</dd>
+   <dd> - Aarav will work on the behind the scenes technical aspects of organizing and graphing our data</dd>
+   <dd> - Becca will work on the organization of the physical website and making it look professional and understandable</dd>
+
+ </dl>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+  <%- include ('global/scripts');  %>
+  <%- include ('global/footer');  %>
+</body>
+
+
+</html>

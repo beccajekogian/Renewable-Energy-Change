@@ -4,6 +4,7 @@ const ejs = require('ejs');
 let country_info = JSON.parse(fs.readFileSync('../data/data.json', 'utf8'));
 let index_template = fs.readFileSync('views/index.ejs', 'utf8');
 let country_template = fs.readFileSync('views/country.ejs', 'utf8');
+let about_template = fs.readFileSync('views/about.ejs', 'utf8');
 
 /*
   1) Generate a web page for each character
@@ -25,6 +26,11 @@ for (let country in country_info){
 */
 let index_html = ejs.render(index_template, {
   filename: __dirname + '/views/index.ejs',
+  data: country_info
+});
+
+let about_html = ejs.render(about_template, {
+  filename: __dirname + '/views/about.ejs',
   data: country_info
 });
 
