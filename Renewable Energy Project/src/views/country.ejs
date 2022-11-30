@@ -34,6 +34,41 @@
 
   </ul>
   </section>
+  <div id="tester" style="width:90%;height:250px;"></div>
+  <script>
+
+     let xData =  [];
+     let yData = [];
+
+    for (let i = 1966; i < 2022; i++) {
+       xData[i-1966] = i;
+       yData[i-1966] = data[i];
+    }
+    console.log(xData);
+    console.log(yData);
+
+
+
+
+     let graph_data = [{
+       x: xData,
+       y: yData,
+      type: 'scatter',
+      mode: 'lines'
+    }];
+
+    let layout = {
+       xaxis: {
+        tickmode: "linear",
+        tick0: 0.5,
+        dtick: 0.75
+      }
+    }
+
+    Plotly.newPlot('myDiv', graph_data, layout);
+
+
+  </script>
 
 
 
