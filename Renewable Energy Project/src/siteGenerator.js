@@ -35,6 +35,7 @@ let about_html = ejs.render(about_template, {
 });
 
 fs.writeFileSync('../public/index.html', index_html, 'utf8');
+fs.writeFileSync('../public/about.html', about_html, 'utf8');
 
 function getBetterFileName(countryName){
   let betterFileName = countryName.split(" ").join("_");
