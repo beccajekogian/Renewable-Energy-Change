@@ -13,8 +13,9 @@ let about_template = fs.readFileSync('views/about.ejs', 'utf8');
 for (let country in country_info){
   let country_html = ejs.render(country_template, {
     filename: __dirname + '/views/country.ejs',
+    data: country_info,
     country: country,
-    data: country_info[country]
+    countryData: country_info[country]
   });
   country_info[country].link = getBetterFileName(country);
   fs.writeFileSync('../public/'+country_info[country].link+'.html', country_html, 'utf8');
