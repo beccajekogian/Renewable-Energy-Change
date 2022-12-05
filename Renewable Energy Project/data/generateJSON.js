@@ -9,23 +9,31 @@ let dataSet = rawdataset.split("\n");
 
 dataSet.forEach(function(data) {
   let info = data.split(',');
-
   let country = info[0].trim();
 
-  if(country!="Entity"){
+
+
+  if (info[0].trim() != "Entity"){
     let countryStats = {};
     let year = info[2].trim();
     let energy = info[3].trim();
 
-    //country[data[0].trim()] = countryStats;
+    // if (info[1].trim()){
+      let code = info[1].trim();
+    // } else {
+    //   let code = " ";
+    // }
+
+
     if (!finalSet[country]) {
     finalSet[country] = {};
   }
 
     finalSet[country][year] = energy;
-  }
+    finalSet[country]['code'] = code;
+}
 });
-
+console.log(finalSet);
 
 fs.writeFileSync('data.json', JSON.stringify(finalSet), 'utf8');
 

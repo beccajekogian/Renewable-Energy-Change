@@ -1,6 +1,9 @@
 <head>
   <!-- Plotly.js -->
-  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+</head>
+
 </head>
 
 <p>
@@ -14,11 +17,66 @@
 -->
 <div id="tester" style="width:90%;height:250px;"></div>
 
-
   <script>
-  	TESTER = document.getElementById('tester');
-  	Plotly.newPlot( TESTER, [{
-  	x: [1, 2, 3, 4, 5],
-  	y: [1, 2, 4, 8, 16] }], {
-  	margin: { t: 0 } } );
+
+    let countries_names = ["Afghanistan","Albania", "Argentina", "Armenia", "Antarctica", "Australia", "Burundi", "Belgium", "Bangladesh", "Belarus", "Belize" ];
+    let latest_energy = [10, 20, 100, 5, 7, 12, 15, 100, 150, 50, 100];
+    let countriesID = [];
+
+    d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_world_gdp_with_codes.csv', function(err, rows){
+        function unpack(rows, key) {
+            return rows.map(function(row) { return row[key]; });
+        }
+
+  let countries = unpack(rows, 'COUNTRY');
+  console.log(countries);
+
+
+
+      for(let i = 0; i < countries_names.length; i++){
+         if (countries.includes(countries_names[i])){
+           console.log(countries_names[i]);
+            countriesID[i] = countries[countries.indexOf(countries_names[i])];
+            //latest_energy[i] = [countries_names[i]][2020];
+          }
+       }
+        // for (let i = 0; i < locations.length, i++){
+        //   if ()
+        // }
+
+
+          let graph_data = [{
+              type: 'choropleth',
+              locationmode: 'country names',
+              locations: countriesID,
+              z: latest_energy,
+              text: countries_names,
+              autocolorscale: true
+          }];
+
+          let layout = {
+            title: 'Pure alcohol consumption<br>among adults (age 15+) in 2010',
+            geo: {
+                projection: {
+                    type: 'robinson'
+                }
+            }
+          };
+
+          Plotly.newPlot("tester", graph_data, layout, {showLink: false});
+
+      });
+
+
+  //  let countriesID = [];
+
+
+
+    //var countries = [];
+// countries_names = countries_names.map(country_name, funtion(){
+//   return geoJson.features[country_name].properties.id
+// });
+
+
+
   </script>

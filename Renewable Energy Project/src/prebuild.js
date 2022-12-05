@@ -104,10 +104,10 @@ if (fs.existsSync('../public/Spain.html')){
   fs.readdir('../public', (err, files) => {
     if (err) throw err;
 
-    console.log(__dirname);
+    //console.log(__dirname);
 
     for (let file of files) {
-      console.log(file);
+      //console.log(file);
       if (file != 'about.html' && file != 'headers.css' && file != 'styles.css' && file!= 'images'){
         fs.unlink('../public/' + file, (err) => {
           if (err) throw err;
