@@ -23,14 +23,14 @@
     let latest_energy = [10, 20, 100, 5, 7, 12, 15, 100, 150, 50, 100];
     let countriesID = [];
 
-    d3.csv('https://raw.githubusercontent.com/plotly/datasets/master/2014_world_gdp_with_codes.csv', function(err, rows){
+    d3.csv('dataset.csv', function(err, rows){
         function unpack(rows, key) {
             return rows.map(function(row) { return row[key]; });
         }
 
-  let countries = unpack(rows, 'COUNTRY');
+  let countries = unpack(rows, 'Entity');
+  let latest_energy = unpack(rows, 'Entity');
   console.log(countries);
-
 
 
       for(let i = 0; i < countries_names.length; i++){
