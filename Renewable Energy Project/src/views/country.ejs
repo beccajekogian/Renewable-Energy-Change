@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <title><%=country%></title>
-  <meta name="author" content="You">
-  <meta name="description" content="A compendium of Harry Potter characters">
+  <meta name="author" content="Becca + Aarav">
+  <meta name="description" content="A organized display of the change in renewable energy around the world">
   <meta content="text/html" http-equiv="Content-type" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="styles.css">
@@ -20,16 +20,6 @@
   <header>
     <h1><%=country%></h1>
   </header>
-  <section id="energy-stats">
-  <h2>Stats</h2>
-  <ul>
-    <%  for (let i = 1966; i < 2022; i++) { %>
-      <li><%=i%>: <%= countryData[i] %></li>
-    <%}%>
-
-
-  </ul>
-  </section>
 
   <div id="tester" style="width:90%;height:250px;"></div>
 
@@ -40,7 +30,7 @@
 
   <%  for (let i = 1966; i < 2022; i++) {%>
       xdata[<%=(i-1966)%>] = <%=i%>
-      ydata[<%=(i-1966)%>] = <%=data[i]%>
+      ydata[<%=(i-1966)%>] = <%=countryData[i]%>
     <%}%>
 
     let graph_data = [{
@@ -53,8 +43,8 @@
     let layout = {
        xaxis: {
         tickmode: "linear",
-        tick0: 0.5,
-        dtick: 0.75
+        tick0: 1,
+        dtick: 1
       }
     }
 
@@ -62,6 +52,17 @@
 
 
   </script>
+
+  <section id="energy-stats">
+  <h2>Stats</h2>
+  <ul>
+    <%  for (let i = 1966; i < 2022; i++) { %>
+      <li><%=i%>: <%= countryData[i] %></li>
+    <%}%>
+
+
+  </ul>
+  </section>
 
 
 

@@ -15,7 +15,7 @@ for (let country in country_info){
     filename: __dirname + '/views/country.ejs',
     data: country_info,
     country: country,
-    data: country_info[country],
+    countryData: country_info[country],
     code: country['code']
   });
   country_info[country].link = getBetterFileName(country);

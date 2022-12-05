@@ -4,9 +4,9 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>Harry Potter Characters</title>
-  <meta name="author" content="You">
-  <meta name="description" content="A compendium of Harry Potter characters">
+  <title>Renewable Energy Worldwide</title>
+  <meta name="author" content="Becca + Aarav">
+  <meta name="description" content="A organized display of the change in renewable energy around the world">
   <meta content="text/html" http-equiv="Content-type" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="styles.css">
@@ -20,32 +20,12 @@
   <%- include ('global/navbar', {data:data});  %>
 
   <header>
-    <h1>All the Countries</h1>
-    <h1>Energy Growth percentages each year</h1>
+    <h1>Change in Renewable Energy Around the World Over Time</h1>
+    <h4>Our project provides viewers with insight on the progress of various countries with respect to renewable energy over time. Our format allows the </h4>
+    <h4>viewer to get both a clear visual of worldwide energy change in 2021 (macro page) and a change over time breakdown of each individual country (micro pages).</h4>
   </header>
-  <section id="country-table">
-    <table>
-      <tr>
-        <th>Country</th>
-        <%  for (let i = 1966; i < 2022; i++) { %>
-        <th>Renewables (% growth) in <%=i%></th>
-        <% } %>
 
-      </tr>
-     <% for(let country in data){ %>
-      <tr>
-        <td><a href="<%=data[country].link%>.html"><%= country %></a></td>
-        <%  for (let i = 1966; i < 2022; i++) { %>
-        <td><%= data[country][2021] %></td>
-
-        <%}%>
-
-      </tr>
-      <%}%>
-    </table>
-  </section>
-
-  <div id="tester" style="width:100%;height:500px;"></div>
+  <div id="tester" style="width:100%;height:650px;"></div>
 
   <script>
 
@@ -69,7 +49,7 @@
         y: 0,
         yanchor: "bottom",
         title: {
-          text: "world map",
+          text: "Renewables (% Growth)",
           side: "right"
         }
        }
@@ -85,8 +65,8 @@
          },
          zoom: 0.8
        },
-         width: 600,
-         height: 400,
+         width: 1000,
+         height: 600,
          margin: {
            t: 0,
            b: 0}
@@ -101,6 +81,34 @@
 
 
   </script>
+
+      <p>   Our data reveals the following about renewable energy change in 2021: </p>
+      <p>       - Very few countries have had changes in renewables</p>
+      <p>       - No countries have made significant progress in renewables </p>
+      <p>       - Many countries in or near Europe have had setbacks in renewables </p>
+
+  <section id="country-table">
+    <table>
+      <tr>
+        <th>Country</th>
+        <%  for (let i = 1966; i < 2022; i++) { %>
+        <th>Renewables (% growth) in <%=i%></th>
+        <% } %>
+
+      </tr>
+     <% for(let country in data){ %>
+      <tr>
+        <td><a href="<%=data[country].link%>.html"><%= country %></a></td>
+        <%  for (let i = 1966; i < 2022; i++) { %>
+        <td><%= data[country][i] %></td>
+
+        <%}%>
+
+      </tr>
+      <%}%>
+    </table>
+  </section>
+
 
   <%- include ('global/scripts');  %>
   <%- include ('global/footer');  %>
