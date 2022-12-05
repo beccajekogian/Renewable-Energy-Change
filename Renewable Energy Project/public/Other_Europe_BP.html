@@ -10,6 +10,8 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 </head>
@@ -514,192 +516,261 @@
 
   <script>
 
-     let xdata =  [];
-     let ydata = [];
+     let yearData =  [];
+     let countrydata = [];
+     let worldData = [];
 
   
-      xdata[0] = 1966
-      ydata[0] = 10.066986083984375
+      yearData[0] = 1966
+      countrydata[0] = 10.066986083984375
+      worldData[0] = 6.590068340301514
     
-      xdata[1] = 1967
-      ydata[1] = 8.035707473754883
+      yearData[1] = 1967
+      countrydata[1] = 8.035707473754883
+      worldData[1] = 2.1997451782226562
     
-      xdata[2] = 1968
-      ydata[2] = 10.405576705932617
+      yearData[2] = 1968
+      countrydata[2] = 10.405576705932617
+      worldData[2] = 5.395543575286865
     
-      xdata[3] = 1969
-      ydata[3] = 24.200105667114258
+      yearData[3] = 1969
+      countrydata[3] = 24.200105667114258
+      worldData[3] = 5.844545364379883
     
-      xdata[4] = 1970
-      ydata[4] = 0.3398418426513672
+      yearData[4] = 1970
+      countrydata[4] = 0.3398418426513672
+      worldData[4] = 4.907345771789551
     
-      xdata[5] = 1971
-      ydata[5] = 7.346606254577637
+      yearData[5] = 1971
+      countrydata[5] = 7.346606254577637
+      worldData[5] = 4.5723795890808105
     
-      xdata[6] = 1972
-      ydata[6] = 15.382981300354004
+      yearData[6] = 1972
+      countrydata[6] = 15.382981300354004
+      worldData[6] = 4.790472984313965
     
-      xdata[7] = 1973
-      ydata[7] = -7.139182090759277
+      yearData[7] = 1973
+      countrydata[7] = -7.139182090759277
+      worldData[7] = 1.5240073204040527
     
-      xdata[8] = 1974
-      ydata[8] = 25.060510635375977
+      yearData[8] = 1974
+      countrydata[8] = 25.060510635375977
+      worldData[8] = 9.645593643188477
     
-      xdata[9] = 1975
-      ydata[9] = -4.738325119018555
+      yearData[9] = 1975
+      countrydata[9] = -4.738325119018555
+      worldData[9] = 1.1834144592285156
     
-      xdata[10] = 1976
-      ydata[10] = 7.286357879638672
+      yearData[10] = 1976
+      countrydata[10] = 7.286357879638672
+      worldData[10] = -0.09218454360961914
     
-      xdata[11] = 1977
-      ydata[11] = 18.11317253112793
+      yearData[11] = 1977
+      countrydata[11] = 18.11317253112793
+      worldData[11] = 3.6566972732543945
     
-      xdata[12] = 1978
-      ydata[12] = 3.90549898147583
+      yearData[12] = 1978
+      countrydata[12] = 3.90549898147583
+      worldData[12] = 8.410680770874023
     
-      xdata[13] = 1979
-      ydata[13] = 5.980360507965088
+      yearData[13] = 1979
+      countrydata[13] = 5.980360507965088
+      worldData[13] = 5.304157733917236
     
-      xdata[14] = 1980
-      ydata[14] = 7.5081706047058105
+      yearData[14] = 1980
+      countrydata[14] = 7.5081706047058105
+      worldData[14] = 2.4632930755615234
     
-      xdata[15] = 1981
-      ydata[15] = -9.825170516967773
+      yearData[15] = 1981
+      countrydata[15] = -9.825170516967773
+      worldData[15] = 2.1235227584838867
     
-      xdata[16] = 1982
-      ydata[16] = -5.929631233215332
+      yearData[16] = 1982
+      countrydata[16] = -5.929631233215332
+      worldData[16] = 2.6036977767944336
     
-      xdata[17] = 1983
-      ydata[17] = -6.016534805297852
+      yearData[17] = 1983
+      countrydata[17] = -6.016534805297852
+      worldData[17] = 4.890298843383789
     
-      xdata[18] = 1984
-      ydata[18] = 14.286602020263672
+      yearData[18] = 1984
+      countrydata[18] = 14.286602020263672
+      worldData[18] = 4.0596604347229
     
-      xdata[19] = 1985
-      ydata[19] = 14.504694938659668
+      yearData[19] = 1985
+      countrydata[19] = 14.504694938659668
+      worldData[19] = 2.4630308151245117
     
-      xdata[20] = 1986
-      ydata[20] = 13.73094367980957
+      yearData[20] = 1986
+      countrydata[20] = 13.73094367980957
+      worldData[20] = 2.3479342460632324
     
-      xdata[21] = 1987
-      ydata[21] = 3.008699417114258
+      yearData[21] = 1987
+      countrydata[21] = 3.008699417114258
+      worldData[21] = 1.5991926193237305
     
-      xdata[22] = 1988
-      ydata[22] = 0.03203153610229492
+      yearData[22] = 1988
+      countrydata[22] = 0.03203153610229492
+      worldData[22] = 3.2791495323181152
     
-      xdata[23] = 1989
-      ydata[23] = -7.871437072753906
+      yearData[23] = 1989
+      countrydata[23] = -7.871437072753906
+      worldData[23] = 0.31087398529052734
     
-      xdata[24] = 1990
-      ydata[24] = -34.669952392578125
+      yearData[24] = 1990
+      countrydata[24] = -34.669952392578125
+      worldData[24] = 4.126632213592529
     
-      xdata[25] = 1991
-      ydata[25] = 22.42170524597168
+      yearData[25] = 1991
+      countrydata[25] = 22.42170524597168
+      worldData[25] = 2.5889039039611816
     
-      xdata[26] = 1992
-      ydata[26] = -13.276225090026855
+      yearData[26] = 1992
+      countrydata[26] = -13.276225090026855
+      worldData[26] = 0.28334856033325195
     
-      xdata[27] = 1993
-      ydata[27] = -8.351987838745117
+      yearData[27] = 1993
+      countrydata[27] = -8.351987838745117
+      worldData[27] = 5.834341049194336
     
-      xdata[28] = 1994
-      ydata[28] = 12.861156463623047
+      yearData[28] = 1994
+      countrydata[28] = 12.861156463623047
+      worldData[28] = 1.1614799499511719
     
-      xdata[29] = 1995
-      ydata[29] = 0.8432269096374512
+      yearData[29] = 1995
+      countrydata[29] = 0.8432269096374512
+      worldData[29] = 5.369400978088379
     
-      xdata[30] = 1996
-      ydata[30] = 24.862171173095703
+      yearData[30] = 1996
+      countrydata[30] = 24.862171173095703
+      worldData[30] = 1.2130975723266602
     
-      xdata[31] = 1997
-      ydata[31] = -8.860921859741211
+      yearData[31] = 1997
+      countrydata[31] = -8.860921859741211
+      worldData[31] = 2.232658863067627
     
-      xdata[32] = 1998
-      ydata[32] = 1.0214805603027344
+      yearData[32] = 1998
+      countrydata[32] = 1.0214805603027344
+      worldData[32] = 1.1594533920288086
     
-      xdata[33] = 1999
-      ydata[33] = 7.739865779876709
+      yearData[33] = 1999
+      countrydata[33] = 7.739865779876709
+      worldData[33] = 1.2169837951660156
     
-      xdata[34] = 2000
-      ydata[34] = -9.94541072845459
+      yearData[34] = 2000
+      countrydata[34] = -9.94541072845459
+      worldData[34] = 2.1108031272888184
     
-      xdata[35] = 2001
-      ydata[35] = -2.3111343383789062
+      yearData[35] = 2001
+      countrydata[35] = -2.3111343383789062
+      worldData[35] = -1.9189715385437012
     
-      xdata[36] = 2002
-      ydata[36] = -0.48804283142089844
+      yearData[36] = 2002
+      countrydata[36] = -0.48804283142089844
+      worldData[36] = 3.622567653656006
     
-      xdata[37] = 2003
-      ydata[37] = -0.6183087825775146
+      yearData[37] = 2003
+      countrydata[37] = -0.6183087825775146
+      worldData[37] = 1.2948393821716309
     
-      xdata[38] = 2004
-      ydata[38] = 14.230430603027344
+      yearData[38] = 2004
+      countrydata[38] = 14.230430603027344
+      worldData[38] = 8.622241020202637
     
-      xdata[39] = 2005
-      ydata[39] = 1.8313884735107422
+      yearData[39] = 2005
+      countrydata[39] = 1.8313884735107422
+      worldData[39] = 5.162906646728516
     
-      xdata[40] = 2006
-      ydata[40] = -1.223897933959961
+      yearData[40] = 2006
+      countrydata[40] = -1.223897933959961
+      worldData[40] = 6.132674217224121
     
-      xdata[41] = 2007
-      ydata[41] = -4.76076602935791
+      yearData[41] = 2007
+      countrydata[41] = -4.76076602935791
+      worldData[41] = 5.54959774017334
     
-      xdata[42] = 2008
-      ydata[42] = 22.514511108398438
+      yearData[42] = 2008
+      countrydata[42] = 22.514511108398438
+      worldData[42] = 9.90704345703125
     
-      xdata[43] = 2009
-      ydata[43] = 17.929065704345703
+      yearData[43] = 2009
+      countrydata[43] = 17.929065704345703
+      worldData[43] = 3.5827994346618652
     
-      xdata[44] = 2010
-      ydata[44] = 23.81621551513672
+      yearData[44] = 2010
+      countrydata[44] = 23.81621551513672
+      worldData[44] = 8.878135681152344
     
-      xdata[45] = 2011
-      ydata[45] = -20.04694366455078
+      yearData[45] = 2011
+      countrydata[45] = -20.04694366455078
+      worldData[45] = 5.072569847106934
     
-      xdata[46] = 2012
-      ydata[46] = 7.865345478057861
+      yearData[46] = 2012
+      countrydata[46] = 7.865345478057861
+      worldData[46] = 6.525528430938721
     
-      xdata[47] = 2013
-      ydata[47] = 27.610313415527344
+      yearData[47] = 2013
+      countrydata[47] = 27.610313415527344
+      worldData[47] = 7.114362716674805
     
-      xdata[48] = 2014
-      ydata[48] = -7.422685623168945
+      yearData[48] = 2014
+      countrydata[48] = -7.422685623168945
+      worldData[48] = 5.429673194885254
     
-      xdata[49] = 2015
-      ydata[49] = 0.7298588752746582
+      yearData[49] = 2015
+      countrydata[49] = 0.7298588752746582
+      worldData[49] = 4.057598114013672
     
-      xdata[50] = 2016
-      ydata[50] = 11.51014518737793
+      yearData[50] = 2016
+      countrydata[50] = 11.51014518737793
+      worldData[50] = 6.049191951751709
     
-      xdata[51] = 2017
-      ydata[51] = -3.9330244064331055
+      yearData[51] = 2017
+      countrydata[51] = -3.9330244064331055
+      worldData[51] = 6.10586404800415
     
-      xdata[52] = 2018
-      ydata[52] = 19.726276397705078
+      yearData[52] = 2018
+      countrydata[52] = 19.726276397705078
+      worldData[52] = 6.830930709838867
     
-      xdata[53] = 2019
-      ydata[53] = 0.01882314682006836
+      yearData[53] = 2019
+      countrydata[53] = 0.01882314682006836
+      worldData[53] = 5.602884292602539
     
-      xdata[54] = 2020
-      ydata[54] = -1.5692591667175293
+      yearData[54] = 2020
+      countrydata[54] = -1.5692591667175293
+      worldData[54] = 4.997849464416504
     
-      xdata[55] = 2021
-      ydata[55] = 15.404343605041504
+      yearData[55] = 2021
+      countrydata[55] = 15.404343605041504
+      worldData[55] = 5.992472171783447
     
 
-    let graph_data = [{
-       x: xdata,
-       y: ydata,
+    var trace1 = {
+       x: yearData,
+       y: countrydata,
+       name: 'Country Data',
       type: 'scatter',
-      mode: 'lines'
-    }];
+      mode: 'lines+markers'
+    };
 
-    let layout = {
+    var trace2 = {
+       x: yearData,
+       y: worldData,
+      name: 'World Data',
+      type: 'scatter',
+      mode: 'lines+markers'
+    };
+
+    var graph_data = [ trace1, trace2 ];
+
+
+    var layout = {
        xaxis: {
-        tickmode: "linear",
         tick0: 1,
         dtick: 1
-      }
+      },
+      title: 'country vs world data from 1966-2021'
     }
 
     Plotly.newPlot('tester', graph_data, layout);

@@ -10,6 +10,8 @@
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
 </head>
@@ -25,27 +27,40 @@
 
   <script>
 
-     let xdata =  [];
-     let ydata = [];
+     let yearData =  [];
+     let countrydata = [];
+     let worldData = [];
 
   <%  for (let i = 1966; i < 2022; i++) {%>
-      xdata[<%=(i-1966)%>] = <%=i%>
-      ydata[<%=(i-1966)%>] = <%=countryData[i]%>
+      yearData[<%=(i-1966)%>] = <%=i%>
+      countrydata[<%=(i-1966)%>] = <%= countryData[i]%>
+      worldData[<%=(i-1966)%>] = <%= data['World'][i]%>
     <%}%>
 
-    let graph_data = [{
-       x: xdata,
-       y: ydata,
+    var trace1 = {
+       x: yearData,
+       y: countrydata,
+       name: 'Country Data',
       type: 'scatter',
-      mode: 'lines'
-    }];
+      mode: 'lines+markers'
+    };
 
-    let layout = {
+    var trace2 = {
+       x: yearData,
+       y: worldData,
+      name: 'World Data',
+      type: 'scatter',
+      mode: 'lines+markers'
+    };
+
+    var graph_data = [trace1, trace2];
+
+    var layout = {
        xaxis: {
-        tickmode: "linear",
         tick0: 1,
         dtick: 1
-      }
+      },
+      title: 'country vs world data from 1966-2021'
     }
 
     Plotly.newPlot('tester', graph_data, layout);
