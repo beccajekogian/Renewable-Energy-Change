@@ -50,11 +50,13 @@ let style = 'styles.css';
         if (err) throw err;
     });
   }
+  /*
   if (fs.existsSync('about.html')){
     fs.rename('about.html', '../public/about.html', (err) => {
         if (err) throw err;
     });
   }
+  */
   // else if (fs.existsSync('../public/styles.css')){
   //   fs.rename('../public/styles.css', 'styles.css', (err) => {
   //       if (err) throw err;
@@ -107,8 +109,8 @@ if (fs.existsSync('../public/Spain.html')){
     //console.log(__dirname);
 
     for (let file of files) {
-      //console.log(file);
-      if (file != 'about.html' && file != 'headers.css' && file != 'styles.css' && file!= 'images'){
+      console.log(file);
+      if (file != 'headers.css' && file != 'styles.css' && file!= 'images'){
         fs.unlink('../public/' + file, (err) => {
           if (err) throw err;
         });

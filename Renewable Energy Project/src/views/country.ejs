@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <%- include ('global/navbar');  %>
+  <%- include ('global/navbar', {data:data});  %>
 
   <header>
     <h1><%=country%></h1>
@@ -24,7 +24,7 @@
   <h2>Stats</h2>
   <ul>
     <%  for (let i = 1966; i < 2022; i++) { %>
-      <li><%=i%>: <%= data[i] %></li>
+      <li><%=i%>: <%= countryData[i] %></li>
     <%}%>
 
 

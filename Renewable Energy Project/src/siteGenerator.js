@@ -13,6 +13,7 @@ let about_template = fs.readFileSync('views/about.ejs', 'utf8');
 for (let country in country_info){
   let country_html = ejs.render(country_template, {
     filename: __dirname + '/views/country.ejs',
+    data: country_info,
     country: country,
     data: country_info[country],
     code: country['code']
@@ -36,6 +37,7 @@ let about_html = ejs.render(about_template, {
 });
 
 fs.writeFileSync('../public/index.html', index_html, 'utf8');
+fs.writeFileSync('../public/about.html', about_html, 'utf8');
 
 function getBetterFileName(countryName){
   let betterFileName = countryName.split(" ").join("_");
