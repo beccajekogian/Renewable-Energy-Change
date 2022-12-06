@@ -33,7 +33,6 @@ dataSet.forEach(function(data) {
     finalSet[country]['code'] = code;
 }
 });
-console.log(finalSet);
 
 fs.writeFileSync('data.json', JSON.stringify(finalSet), 'utf8');
 
