@@ -10,6 +10,11 @@ let about_template = fs.readFileSync('views/about.ejs', 'utf8');
   1) Generate a web page for each character
   2) Keep track of the link for index.html
 */
+
+for (let country in country_info){
+    country_info[country].link = getBetterFileName(country);
+}
+
 for (let country in country_info){
   let country_html = ejs.render(country_template, {
     filename: __dirname + '/views/country.ejs',
@@ -18,7 +23,7 @@ for (let country in country_info){
     countryData: country_info[country],
     code: country['code']
   });
-  country_info[country].link = getBetterFileName(country);
+
   fs.writeFileSync('../public/'+country_info[country].link+'.html', country_html, 'utf8');
 }
 
