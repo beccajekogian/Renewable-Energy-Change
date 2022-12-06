@@ -20,7 +20,6 @@ for (let country in country_info){
   });
   country_info[country].link = getBetterFileName(country);
   fs.writeFileSync('../public/'+country_info[country].link+'.html', country_html, 'utf8');
-
 }
 
 /*
@@ -28,7 +27,7 @@ for (let country in country_info){
 */
 let index_html = ejs.render(index_template, {
   filename: __dirname + '/views/index.ejs',
-  data: country_info,
+  data: country_info
 });
 
 let about_html = ejs.render(about_template, {
