@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Thailand</title>
+  <meta name="author" content="Becca + Aarav">
+  <meta name="description" content="A organized display of the change in renewable energy around the world">
+  <meta content="text/html" http-equiv="Content-type" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src='https://cdn.plot.ly/plotly-2.16.1.min.js'></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <head>
+  <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./assets/css/features.css" rel="stylesheet">
+  <link href="features.css" rel="stylesheet">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about.html">About</a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Countries
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          
+
+          <a class="dropdown-item" href="Africa.html">Africa</a>
+
+          
+
+          <a class="dropdown-item" href="Africa_BP.html">Africa (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Algeria.html">Algeria</a>
+
+          
+
+          <a class="dropdown-item" href="Argentina.html">Argentina</a>
+
+          
+
+          <a class="dropdown-item" href="Asia.html">Asia</a>
+
+          
+
+          <a class="dropdown-item" href="Asia_Pacific_BP.html">Asia Pacific (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Australia.html">Australia</a>
+
+          
+
+          <a class="dropdown-item" href="Austria.html">Austria</a>
+
+          
+
+          <a class="dropdown-item" href="Azerbaijan.html">Azerbaijan</a>
+
+          
+
+          <a class="dropdown-item" href="Bangladesh.html">Bangladesh</a>
+
+          
+
+          <a class="dropdown-item" href="Belarus.html">Belarus</a>
+
+          
+
+          <a class="dropdown-item" href="Belgium.html">Belgium</a>
+
+          
+
+          <a class="dropdown-item" href="Brazil.html">Brazil</a>
+
+          
+
+          <a class="dropdown-item" href="Bulgaria.html">Bulgaria</a>
+
+          
+
+          <a class="dropdown-item" href="CIS_BP.html">CIS (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Canada.html">Canada</a>
+
+          
+
+          <a class="dropdown-item" href="Central_America_BP.html">Central America (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Chile.html">Chile</a>
+
+          
+
+          <a class="dropdown-item" href="China.html">China</a>
+
+          
+
+          <a class="dropdown-item" href="Colombia.html">Colombia</a>
+
+          
+
+          <a class="dropdown-item" href="Croatia.html">Croatia</a>
+
+          
+
+          <a class="dropdown-item" href="Cyprus.html">Cyprus</a>
+
+          
+
+          <a class="dropdown-item" href="Czechia.html">Czechia</a>
+
+          
+
+          <a class="dropdown-item" href="Denmark.html">Denmark</a>
+
+          
+
+          <a class="dropdown-item" href="Eastern_Africa_BP.html">Eastern Africa (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Ecuador.html">Ecuador</a>
+
+          
+
+          <a class="dropdown-item" href="Egypt.html">Egypt</a>
+
+          
+
+          <a class="dropdown-item" href="Estonia.html">Estonia</a>
+
+          
+
+          <a class="dropdown-item" href="Europe.html">Europe</a>
+
+          
+
+          <a class="dropdown-item" href="Europe_BP.html">Europe (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="European_Union_27.html">European Union (27)</a>
+
+          
+
+          <a class="dropdown-item" href="Finland.html">Finland</a>
+
+          
+
+          <a class="dropdown-item" href="France.html">France</a>
+
+          
+
+          <a class="dropdown-item" href="Germany.html">Germany</a>
+
+          
+
+          <a class="dropdown-item" href="Greece.html">Greece</a>
+
+          
+
+          <a class="dropdown-item" href="High-income_countries.html">High-income countries</a>
+
+          
+
+          <a class="dropdown-item" href="Hong_Kong.html">Hong Kong</a>
+
+          
+
+          <a class="dropdown-item" href="Hungary.html">Hungary</a>
+
+          
+
+          <a class="dropdown-item" href="Iceland.html">Iceland</a>
+
+          
+
+          <a class="dropdown-item" href="India.html">India</a>
+
+          
+
+          <a class="dropdown-item" href="Indonesia.html">Indonesia</a>
+
+          
+
+          <a class="dropdown-item" href="Iran.html">Iran</a>
+
+          
+
+          <a class="dropdown-item" href="Iraq.html">Iraq</a>
+
+          
+
+          <a class="dropdown-item" href="Ireland.html">Ireland</a>
+
+          
+
+          <a class="dropdown-item" href="Israel.html">Israel</a>
+
+          
+
+          <a class="dropdown-item" href="Italy.html">Italy</a>
+
+          
+
+          <a class="dropdown-item" href="Japan.html">Japan</a>
+
+          
+
+          <a class="dropdown-item" href="Kazakhstan.html">Kazakhstan</a>
+
+          
+
+          <a class="dropdown-item" href="Kuwait.html">Kuwait</a>
+
+          
+
+          <a class="dropdown-item" href="Latvia.html">Latvia</a>
+
+          
+
+          <a class="dropdown-item" href="Lithuania.html">Lithuania</a>
+
+          
+
+          <a class="dropdown-item" href="Lower-middle-income_countries.html">Lower-middle-income countries</a>
+
+          
+
+          <a class="dropdown-item" href="Luxembourg.html">Luxembourg</a>
+
+          
+
+          <a class="dropdown-item" href="Malaysia.html">Malaysia</a>
+
+          
+
+          <a class="dropdown-item" href="Mexico.html">Mexico</a>
+
+          
+
+          <a class="dropdown-item" href="Middle_Africa_BP.html">Middle Africa (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Middle_East_BP.html">Middle East (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Morocco.html">Morocco</a>
+
+          
+
+          <a class="dropdown-item" href="Netherlands.html">Netherlands</a>
+
+          
+
+          <a class="dropdown-item" href="New_Zealand.html">New Zealand</a>
+
+          
+
+          <a class="dropdown-item" href="Non-OECD_BP.html">Non-OECD (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="North_America.html">North America</a>
+
+          
+
+          <a class="dropdown-item" href="North_America_BP.html">North America (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="North_Macedonia.html">North Macedonia</a>
+
+          
+
+          <a class="dropdown-item" href="Norway.html">Norway</a>
+
+          
+
+          <a class="dropdown-item" href="OECD_BP.html">OECD (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Oceania.html">Oceania</a>
+
+          
+
+          <a class="dropdown-item" href="Oman.html">Oman</a>
+
+          
+
+          <a class="dropdown-item" href="Other_Africa_BP.html">Other Africa (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Other_Asia_Pacific_BP.html">Other Asia Pacific (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Other_CIS_BP.html">Other CIS (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Other_Caribbean_BP.html">Other Caribbean (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Other_Europe_BP.html">Other Europe (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Other_Middle_East_BP.html">Other Middle East (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Other_Northern_Africa_BP.html">Other Northern Africa (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Other_South_America_BP.html">Other South America (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Other_South_and_Central_America_BP.html">Other South and Central America (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Other_Southern_Africa_BP.html">Other Southern Africa (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Pakistan.html">Pakistan</a>
+
+          
+
+          <a class="dropdown-item" href="Peru.html">Peru</a>
+
+          
+
+          <a class="dropdown-item" href="Philippines.html">Philippines</a>
+
+          
+
+          <a class="dropdown-item" href="Poland.html">Poland</a>
+
+          
+
+          <a class="dropdown-item" href="Portugal.html">Portugal</a>
+
+          
+
+          <a class="dropdown-item" href="Qatar.html">Qatar</a>
+
+          
+
+          <a class="dropdown-item" href="Romania.html">Romania</a>
+
+          
+
+          <a class="dropdown-item" href="Russia.html">Russia</a>
+
+          
+
+          <a class="dropdown-item" href="Saudi_Arabia.html">Saudi Arabia</a>
+
+          
+
+          <a class="dropdown-item" href="Singapore.html">Singapore</a>
+
+          
+
+          <a class="dropdown-item" href="Slovakia.html">Slovakia</a>
+
+          
+
+          <a class="dropdown-item" href="Slovenia.html">Slovenia</a>
+
+          
+
+          <a class="dropdown-item" href="South_Africa.html">South Africa</a>
+
+          
+
+          <a class="dropdown-item" href="South_America.html">South America</a>
+
+          
+
+          <a class="dropdown-item" href="South_Korea.html">South Korea</a>
+
+          
+
+          <a class="dropdown-item" href="South_and_Central_America_BP.html">South and Central America (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="Spain.html">Spain</a>
+
+          
+
+          <a class="dropdown-item" href="Sri_Lanka.html">Sri Lanka</a>
+
+          
+
+          <a class="dropdown-item" href="Sweden.html">Sweden</a>
+
+          
+
+          <a class="dropdown-item" href="Switzerland.html">Switzerland</a>
+
+          
+
+          <a class="dropdown-item" href="Taiwan.html">Taiwan</a>
+
+          
+
+          <a class="dropdown-item" href="Thailand.html">Thailand</a>
+
+          
+
+          <a class="dropdown-item" href="Trinidad_and_Tobago.html">Trinidad and Tobago</a>
+
+          
+
+          <a class="dropdown-item" href="Turkey.html">Turkey</a>
+
+          
+
+          <a class="dropdown-item" href="Turkmenistan.html">Turkmenistan</a>
+
+          
+
+          <a class="dropdown-item" href="USSR.html">USSR</a>
+
+          
+
+          <a class="dropdown-item" href="Ukraine.html">Ukraine</a>
+
+          
+
+          <a class="dropdown-item" href="United_Arab_Emirates.html">United Arab Emirates</a>
+
+          
+
+          <a class="dropdown-item" href="United_Kingdom.html">United Kingdom</a>
+
+          
+
+          <a class="dropdown-item" href="United_States.html">United States</a>
+
+          
+
+          <a class="dropdown-item" href="Upper-middle-income_countries.html">Upper-middle-income countries</a>
+
+          
+
+          <a class="dropdown-item" href="Uzbekistan.html">Uzbekistan</a>
+
+          
+
+          <a class="dropdown-item" href="Venezuela.html">Venezuela</a>
+
+          
+
+          <a class="dropdown-item" href="Vietnam.html">Vietnam</a>
+
+          
+
+          <a class="dropdown-item" href="Western_Africa_BP.html">Western Africa (BP)</a>
+
+          
+
+          <a class="dropdown-item" href="World.html">World</a>
+
+          
+          <!-- <div class="dropdown-divider"></div> -->
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+  <header>
+    <h1>Thailand</h1>
+  </header>
+
+  <div id="tester" style="width:100%;height:400px;"></div>
+
+  <script>
+
+     let yearData =  [];
+     let countrydata = [];
+     let worldData = [];
+
+  
+      yearData[0] = 1966
+      countrydata[0] = 26.516056060791016
+      worldData[0] = 6.590068340301514
+    
+      yearData[1] = 1967
+      countrydata[1] = 28.571426391601562
+      worldData[1] = 2.1997451782226562
+    
+      yearData[2] = 1968
+      countrydata[2] = 2.7046680450439453
+      worldData[2] = 5.395543575286865
+    
+      yearData[3] = 1969
+      countrydata[3] = -25.551599502563477
+      worldData[3] = 5.844545364379883
+    
+      yearData[4] = 1970
+      countrydata[4] = 70.8412857055664
+      worldData[4] = 4.907345771789551
+    
+      yearData[5] = 1971
+      countrydata[5] = 14.605498313903809
+      worldData[5] = 4.5723795890808105
+    
+      yearData[6] = 1972
+      countrydata[6] = -15.625
+      worldData[6] = 4.790472984313965
+    
+      yearData[7] = 1973
+      countrydata[7] = 8.79629898071289
+      worldData[7] = 1.5240073204040527
+    
+      yearData[8] = 1974
+      countrydata[8] = 30.74468421936035
+      worldData[8] = 9.645593643188477
+    
+      yearData[9] = 1975
+      countrydata[9] = 38.28315734863281
+      worldData[9] = 1.1834144592285156
+    
+      yearData[10] = 1976
+      countrydata[10] = 7.002067565917969
+      worldData[10] = -0.09218454360961914
+    
+      yearData[11] = 1977
+      countrydata[11] = -10.22821044921875
+      worldData[11] = 3.6566972732543945
+    
+      yearData[12] = 1978
+      countrydata[12] = -35.37519454956055
+      worldData[12] = 8.410680770874023
+    
+      yearData[13] = 1979
+      countrydata[13] = 54.644561767578125
+      worldData[13] = 5.304157733917236
+    
+      yearData[14] = 1980
+      countrydata[14] = -60.98682403564453
+      worldData[14] = 2.4632930755615234
+    
+      yearData[15] = 1981
+      countrydata[15] = 133.62135314941406
+      worldData[15] = 2.1235227584838867
+    
+      yearData[16] = 1982
+      countrydata[16] = 28.984535217285156
+      worldData[16] = 2.6036977767944336
+    
+      yearData[17] = 1983
+      countrydata[17] = -4.588109016418457
+      worldData[17] = 4.890298843383789
+    
+      yearData[18] = 1984
+      countrydata[18] = 11.502731323242188
+      worldData[18] = 4.0596604347229
+    
+      yearData[19] = 1985
+      countrydata[19] = -9.556478500366211
+      worldData[19] = 2.4630308151245117
+    
+      yearData[20] = 1986
+      countrydata[20] = 49.86995315551758
+      worldData[20] = 2.3479342460632324
+    
+      yearData[21] = 1987
+      countrydata[21] = -26.58405303955078
+      worldData[21] = 1.5991926193237305
+    
+      yearData[22] = 1988
+      countrydata[22] = -7.7020111083984375
+      worldData[22] = 3.2791495323181152
+    
+      yearData[23] = 1989
+      countrydata[23] = 47.63203811645508
+      worldData[23] = 0.31087398529052734
+    
+      yearData[24] = 1990
+      countrydata[24] = -10.999011993408203
+      worldData[24] = 4.126632213592529
+    
+      yearData[25] = 1991
+      countrydata[25] = -7.920658588409424
+      worldData[25] = 2.5889039039611816
+    
+      yearData[26] = 1992
+      countrydata[26] = -7.832736015319824
+      worldData[26] = 0.28334856033325195
+    
+      yearData[27] = 1993
+      countrydata[27] = -12.868345260620117
+      worldData[27] = 5.834341049194336
+    
+      yearData[28] = 1994
+      countrydata[28] = 22.307836532592773
+      worldData[28] = 1.1614799499511719
+    
+      yearData[29] = 1995
+      countrydata[29] = 51.21703338623047
+      worldData[29] = 5.369400978088379
+    
+      yearData[30] = 1996
+      countrydata[30] = 10.18984317779541
+      worldData[30] = 1.2130975723266602
+    
+      yearData[31] = 1997
+      countrydata[31] = -0.8976221084594727
+      worldData[31] = 2.232658863067627
+    
+      yearData[32] = 1998
+      countrydata[32] = -26.608211517333984
+      worldData[32] = 1.1594533920288086
+    
+      yearData[33] = 1999
+      countrydata[33] = -28.550142288208008
+      worldData[33] = 1.2169837951660156
+    
+      yearData[34] = 2000
+      countrydata[34] = 66.40324401855469
+      worldData[34] = 2.1108031272888184
+    
+      yearData[35] = 2001
+      countrydata[35] = 5.875217914581299
+      worldData[35] = -1.9189715385437012
+    
+      yearData[36] = 2002
+      countrydata[36] = 19.48232650756836
+      worldData[36] = 3.622567653656006
+    
+      yearData[37] = 2003
+      countrydata[37] = 3.9400458335876465
+      worldData[37] = 1.2948393821716309
+    
+      yearData[38] = 2004
+      countrydata[38] = -7.865792274475098
+      worldData[38] = 8.622241020202637
+    
+      yearData[39] = 2005
+      countrydata[39] = 10.704744338989258
+      worldData[39] = 5.162906646728516
+    
+      yearData[40] = 2006
+      countrydata[40] = 39.099334716796875
+      worldData[40] = 6.132674217224121
+    
+      yearData[41] = 2007
+      countrydata[41] = 0.7994651794433594
+      worldData[41] = 5.54959774017334
+    
+      yearData[42] = 2008
+      countrydata[42] = 26.240550994873047
+      worldData[42] = 9.90704345703125
+    
+      yearData[43] = 2009
+      countrydata[43] = 14.74158763885498
+      worldData[43] = 3.5827994346618652
+    
+      yearData[44] = 2010
+      countrydata[44] = -0.9035229682922363
+      worldData[44] = 8.878135681152344
+    
+      yearData[45] = 2011
+      countrydata[45] = 18.292665481567383
+      worldData[45] = 5.072569847106934
+    
+      yearData[46] = 2012
+      countrydata[46] = 20.77863311767578
+      worldData[46] = 6.525528430938721
+    
+      yearData[47] = 2013
+      countrydata[47] = 11.72168254852295
+      worldData[47] = 7.114362716674805
+    
+      yearData[48] = 2014
+      countrydata[48] = 14.87835693359375
+      worldData[48] = 5.429673194885254
+    
+      yearData[49] = 2015
+      countrydata[49] = 2.7010202407836914
+      worldData[49] = 4.057598114013672
+    
+      yearData[50] = 2016
+      countrydata[50] = 8.201956748962402
+      worldData[50] = 6.049191951751709
+    
+      yearData[51] = 2017
+      countrydata[51] = 15.8156156539917
+      worldData[51] = 6.10586404800415
+    
+      yearData[52] = 2018
+      countrydata[52] = 19.285429000854492
+      worldData[52] = 6.830930709838867
+    
+      yearData[53] = 2019
+      countrydata[53] = 10.04987907409668
+      worldData[53] = 5.602884292602539
+    
+      yearData[54] = 2020
+      countrydata[54] = -4.8854827880859375
+      worldData[54] = 4.997849464416504
+    
+      yearData[55] = 2021
+      countrydata[55] = -0.564807653427124
+      worldData[55] = 5.992472171783447
+    
+
+    var trace1 = {
+       x: yearData,
+       y: countrydata,
+       name: 'Thailand' + ' Data',
+      type: 'scatter',
+      mode: 'lines+markers'
+    };
+
+    var trace2 = {
+       x: yearData,
+       y: worldData,
+      name: 'World Data',
+      type: 'scatter',
+      mode: 'lines+markers'
+    };
+
+    var graph_data = [trace1, trace2];
+
+    var layout = {
+       xaxis: {
+         range: [1965, 2022],
+         title: 'Year',
+        tick0: 1,
+        dtick: 1
+      },
+      yaxis: {
+        title: 'Renewable energy change (%)',
+      },
+      title: 'Thailand' + ' vs world data from 1966-2021'
+    }
+
+    Plotly.newPlot('tester', graph_data, layout);
+
+
+  </script>
+
+  
+    <p> In 2021, Thailand had less progress in renewable energy compared to the rest of the world. 
+    
+
+    
+
+      
+
+  <section id="energy-stats">
+  <h2>Stats</h2>
+  <ul>
+    
+      <li>1966: 26.516056060791016</li>
+    
+      <li>1967: 28.571426391601562</li>
+    
+      <li>1968: 2.7046680450439453</li>
+    
+      <li>1969: -25.551599502563477</li>
+    
+      <li>1970: 70.8412857055664</li>
+    
+      <li>1971: 14.605498313903809</li>
+    
+      <li>1972: -15.625</li>
+    
+      <li>1973: 8.79629898071289</li>
+    
+      <li>1974: 30.74468421936035</li>
+    
+      <li>1975: 38.28315734863281</li>
+    
+      <li>1976: 7.002067565917969</li>
+    
+      <li>1977: -10.22821044921875</li>
+    
+      <li>1978: -35.37519454956055</li>
+    
+      <li>1979: 54.644561767578125</li>
+    
+      <li>1980: -60.98682403564453</li>
+    
+      <li>1981: 133.62135314941406</li>
+    
+      <li>1982: 28.984535217285156</li>
+    
+      <li>1983: -4.588109016418457</li>
+    
+      <li>1984: 11.502731323242188</li>
+    
+      <li>1985: -9.556478500366211</li>
+    
+      <li>1986: 49.86995315551758</li>
+    
+      <li>1987: -26.58405303955078</li>
+    
+      <li>1988: -7.7020111083984375</li>
+    
+      <li>1989: 47.63203811645508</li>
+    
+      <li>1990: -10.999011993408203</li>
+    
+      <li>1991: -7.920658588409424</li>
+    
+      <li>1992: -7.832736015319824</li>
+    
+      <li>1993: -12.868345260620117</li>
+    
+      <li>1994: 22.307836532592773</li>
+    
+      <li>1995: 51.21703338623047</li>
+    
+      <li>1996: 10.18984317779541</li>
+    
+      <li>1997: -0.8976221084594727</li>
+    
+      <li>1998: -26.608211517333984</li>
+    
+      <li>1999: -28.550142288208008</li>
+    
+      <li>2000: 66.40324401855469</li>
+    
+      <li>2001: 5.875217914581299</li>
+    
+      <li>2002: 19.48232650756836</li>
+    
+      <li>2003: 3.9400458335876465</li>
+    
+      <li>2004: -7.865792274475098</li>
+    
+      <li>2005: 10.704744338989258</li>
+    
+      <li>2006: 39.099334716796875</li>
+    
+      <li>2007: 0.7994651794433594</li>
+    
+      <li>2008: 26.240550994873047</li>
+    
+      <li>2009: 14.74158763885498</li>
+    
+      <li>2010: -0.9035229682922363</li>
+    
+      <li>2011: 18.292665481567383</li>
+    
+      <li>2012: 20.77863311767578</li>
+    
+      <li>2013: 11.72168254852295</li>
+    
+      <li>2014: 14.87835693359375</li>
+    
+      <li>2015: 2.7010202407836914</li>
+    
+      <li>2016: 8.201956748962402</li>
+    
+      <li>2017: 15.8156156539917</li>
+    
+      <li>2018: 19.285429000854492</li>
+    
+      <li>2019: 10.04987907409668</li>
+    
+      <li>2020: -4.8854827880859375</li>
+    
+      <li>2021: -0.564807653427124</li>
+    
+
+
+  </ul>
+  </section>
+
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+<!-- <script src="jquery/dist/jquery.slim.min.js"></script>
+<script src="popper.js/dist/umd/popper.min.js"></script>
+<script src="bootstrap/dist/js/bootstrap.min.js"></script> -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+
+  <footer>
+  Our website shows the change in renewable energy around the world over time. We gathered our data from <a href="https://ourworldindata.org/renewable-energy"> Our World in Data.</a>
+</footer>
+
+  </body>
+</body>
+
+</html>
