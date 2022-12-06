@@ -18,7 +18,7 @@
     "build": "cd data && node generateJSON.js && cd .. && cd src && node siteGenerator.js",
     "postbuild": "open http://localhost:3000 && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "git clone https://github.com/beccajekogian/Renewable-Energy-Change.github.io && open https://github.com/beccajekogian/Renewable-Energy-Change.github.io"
+    "publish": "git clone https://github.com/beccajekogian/beccajekogian.github.io && open https://github.com/beccajekogian/beccajekogian.github.io"
   },
   "author": "",
   "license": "ISC"
