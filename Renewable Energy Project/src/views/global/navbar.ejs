@@ -25,7 +25,7 @@
 
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <% for(let country in data){ %>
-          <a class="dropdown-item" href=<%=country + ".html"%>>
+          <a class="dropdown-item" href=<%=data[country].link%>.html>
             <%= country %>
           </a>
           <% } %>

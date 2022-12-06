@@ -68,6 +68,18 @@
 
   </script>
 
+  <% if (data['World'][2021] > countryData[2021]) { %>
+    <p> <%= "In 2021, " + country + " had less progress in renewable energy compared to the rest of the world. "%>
+    <% } %>
+
+    <% if (data['World'][2021] < countryData[2021]) { %>
+      <p> <%= "In 2021, " + country + " had greater progress in renewable energy compared to the rest of the world. "%>
+      <% } %>
+
+      <% if (data['World'][2021] == countryData[2021]) { %>
+        <p> <%= "In 2021, " + country + " had the same progress in renewable energy compared to the rest of the world. "%>
+        <% } %>
+
   <section id="energy-stats">
   <h2>Stats</h2>
   <ul>
